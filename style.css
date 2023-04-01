@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(243, 243, 243);
+  font-family: "Lato", sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  height: 120px;
+}
+
+.menu button,
+.note-panel .save,
+.note-panel .cancel {
+  padding: 12px 25px;
+  background: none;
+  border: 1px solid #999;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3, color 0.3;
+}
+
+.menu button:hover,
+.note-panel .save:hover,
+.note-panel .cancel:hover {
+  background-color: #333;
+  color: #ddd;
+}
+
+.icon {
+  margin-right: 10px;
+}
+.fa-plus {
+  margin-right: 5px;
+}
+.add {
+  margin-right: 20px;
+}
+
+.note-area {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.note {
+  margin: 40px 20px;
+  width: 240px;
+  background-color: rgba(141, 224, 85, 0.905);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 10px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.note-header .delete-note,
+.note-header .edit-note {
+  background: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.note-header .edit-note {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.note-date {
+  font-size: 14px;
+}
+.note-body {
+  padding: 20px 15px;
+  font-size: 14px;
+}
+
+.note-panel {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 0;
+  width: 600px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #333;
+  border-radius: 5px;
+}
+
+.note-panel h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.note-panel label {
+  margin-bottom: 10px;
+}
+
+.note-panel #text,
+.note-panel #category,
+.note-panel #title {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 90%;
+  max-height: 600px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.note-panel #text {
+  min-height: 200px;
+  resize: vertical;
+}
+.note-panel .error {
+  margin-bottom: 20px;
+  color: rgb(226, 52, 52);
+  visibility: hidden;
+}

@@ -48,6 +48,7 @@ const date = () => {
 };
 const category = () => {
   selectedCategory = categories.options[categories.selectedIndex].text;
+  console.log(selectedCategory);
 };
 
 const saveNote = () => {
@@ -100,3 +101,4 @@ btnAdd.addEventListener("click", addNotePanel);
 btnCancel.addEventListener("click", cancelNote);
 btnDeleteAll.addEventListener("click", deleteAllNotes);
 btnSave.addEventListener("click", saveNote);
+
